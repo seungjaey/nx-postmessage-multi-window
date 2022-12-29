@@ -1,0 +1,19 @@
+# Default
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+
+# Ignore artifacts
+build
+coverage
+.next
+lighthouse-ci
+.nx-test
+lhci_reports
+
+# Package-lock
+package-lock.json
+
+# SVG
+*.svg

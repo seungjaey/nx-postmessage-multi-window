@@ -1,0 +1,16 @@
+services:
+  web-app:
+    container_name: web-app
+    image: web-app
+
+  nginx:
+    container_name: nginx-post
+    restart: unless-stopped
+    image: nginx:latest
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx/proxy.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/www.local-kurly.com.pem:/etc/nginx/www.local-kurly.com.pem
+      - ./nginx/www.local-kurly.com-key.pem:/etc/nginx/www.local-kurly.com-key.pem
