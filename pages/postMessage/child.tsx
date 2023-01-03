@@ -27,7 +27,7 @@ const checkDependentScreen = () => {
   }
   return true;
 };
-export default function ChildPage() {
+export default function PostMessageChildPage() {
   const pageId = usePageId();
   const handleClickSendMessage = () => {
     if (!checkDependentScreen()) {
